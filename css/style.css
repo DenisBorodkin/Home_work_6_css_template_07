@@ -41,6 +41,7 @@ body{
 .container {
 	max-width: 815px;
 	padding-top: 123px;
+	padding-bottom: 123px;
 	margin: 0 auto;
 }
 .block-title {
@@ -55,11 +56,13 @@ margin-bottom: 24px;
 	margin-bottom: 137px;
 }
 .block-menu-list li {
-	background:  url("../img/icons/check_icon.png") left/25px 19px no-repeat;
-	padding-left: 34px;
 	margin-bottom: 13px;
 	color: #273d46;
 font-size: 20px;
+}
+.block-menu-list li::before{
+	content: url("../img/icons/check_icon.png");
+	margin-right: 5px;
 }
 .block-menu-list li:nth-child(1){
 text-decoration: line-through;
@@ -69,8 +72,9 @@ font-weight: 700;
 }
 .block-menu-list li:nth-child(2):hover{
 	color: #d55a5a;
-	background: url("../img/icons/check_icon.webp") left/25px 19px no-repeat;
-
+}
+.block-menu-list li:nth-child(2):hover::before{
+	content: url("../img/icons/check_icon.webp");
 }
 .block-menu-list li:nth-child(3){
 font-style: italic;
@@ -102,13 +106,43 @@ color: #ffffff;
 line-height: 44px;
 text-transform: uppercase;
 letter-spacing: 2.8px;
-background: url("../img/icons/Shape_2\ \(1\).svg") right no-repeat;
-padding-right: 32px;
+position: relative;
 }
+.buttontext span::after{
+	position: absolute;
+	content: url("../img/icons/Shape_2\ \(2\).svg");
+	margin-left: 10px;
+	margin-top: 2px;
+	
+
+}
+
 .buttontext:hover{
 background-color: #3a5856;
 }
 .buttontext:active{
 	background-color: #818181;
+}
+.bottomtext {
+	margin-top: 118px;
+	color: #000000;
+	font-size: 18px;
+	line-height: 28px;	
+}
+.bottomtext p{
+	margin-bottom: 43px;
+}
+.text-first-line {
+	max-width: 761px;
+}
+.text-first-line::first-line{
+	color: #ff0000;
+}
+.text-first-letter {
+max-width: 765px;
+}
+.text-first-letter::first-letter{
+	color: #ff0000;
+	font-size: 25px;
 }
 
